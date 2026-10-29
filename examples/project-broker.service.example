@@ -1,0 +1,30 @@
+# Copy outside the checkout and replace all @...@ placeholders before enabling.
+[Unit]
+Description=OpenBao Project Broker
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=notify
+User=@SERVICE_USER@
+ExecStart=@PREFIX@/bin/project-broker
+LoadCredential=approle:@CONFIG_DIR@/approle.json
+Environment=PROJECT_BROKER_CONFIG=@CONFIG_DIR@/projects.json
+Environment=PROJECT_ACCESS_SOCKET=%t/openbao-project-broker/broker.sock
+Environment=PROJECT_BROKER_AUDIT=%S/openbao-project-broker/audit.jsonl
+RuntimeDirectory=openbao-project-broker
+RuntimeDirectoryMode=0711
+StateDirectory=openbao-project-broker
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+LimitCORE=0
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

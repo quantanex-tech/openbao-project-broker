@@ -1,0 +1,12 @@
+{
+  "version": "0.6.0",
+  "files": {
+    "broker.py": "dfef1f73999d2623d0d61ed1b5d809ec432195c6462d797bd723d451eb82d9e1",
+    "client.py": "c2fbcc28957341298551b90b88b9bb041cf3f0568b138f9d9ba65abf76b98a4d",
+    "generic_api.py": "3d9334352ef640b7be88b325bbb710d0cc8de61cc401738d0a0cac67afe0ca9d",
+    "google_client.py": "6e469e76c84571bf2effc0afbb97c710e170fdd89d8d44733b05bc8bcf09af6e",
+    "google_migration.py": "f7c324d035cdc581cc6eabffe3c476146a1269044cadde50aecaca6f16d82263",
+    "google_search_console.py": "558dc45b40c2d7c7cf1ac9fc60bc828853d250eb51a094e2c590f5d342dd8ae4",
+    "workspace_google.py": "281a116c706c9d56d9540628a929438ba16856b70ab85037aafe5f6a9f2ee49a"
+  }
+}

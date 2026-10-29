@@ -1,0 +1,11 @@
+{
+  "purpose": "Nonsecret example; owner replaces the token privately in OpenBao",
+  "api_token": "REPLACE_SECURELY_IN_OPENBAO",
+  "_http": {
+    "version": 1,
+    "base_url": "https://api.example.com",
+    "paths": ["/v1/status"],
+    "methods": ["GET"],
+    "auth": {"type": "bearer", "field": "api_token"}
+  }
+}

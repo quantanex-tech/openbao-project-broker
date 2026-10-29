@@ -1,0 +1,12 @@
+title = "OpenBao Project Broker secret scanning"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Reviewed runtime SHA-256 checksums, not API credentials"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''^manifest\.json$''']
+regexTarget = "line"
+regexes = ['''^\s*"[a-z_]+\.py": "[a-f0-9]{64}",?\s*$''']

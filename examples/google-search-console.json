@@ -1,0 +1,16 @@
+{
+  "purpose": "Nonsecret allocation example; not ready without legitimate owner consent",
+  "_google_search_console": {
+    "version": 1,
+    "account": "operator@example.test",
+    "domain": "example.test",
+    "grant_field": "authorized_user_json",
+    "scopes": [
+      "openid",
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/webmasters.readonly"
+    ],
+    "capabilities": ["identity", "sites_list", "site_get", "sitemaps_list", "searchanalytics_query", "url_inspection"]
+  },
+  "authorized_user_json": {}
+}
